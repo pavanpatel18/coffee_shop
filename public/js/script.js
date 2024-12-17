@@ -96,3 +96,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     locationItems.forEach(item => observer.observe(item));
 });
+
+// Scroll Animation for Newsletter and Footer
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("#newsletter, footer");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => observer.observe(section));
+});
