@@ -401,3 +401,99 @@ body.no-scroll {
 .menu-cta .btn:hover {
     background-color: #6f482b; /* Darker shade on hover */
 }
+
+/* Why Choose Us Section */
+#highlights {
+    padding: 5vw 10vw; /* Balanced padding using Golden Ratio */
+    background-color: #fdf8f2; /* Warm, inviting background */
+    text-align: center;
+    color: #5a4d41;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out; /* Section fade-in effect */
+}
+
+#highlights.visible {
+    opacity: 1;
+    transform: translateY(0); /* Fade-in when visible */
+}
+
+/* Section Header */
+.highlights-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.highlights-header p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+}
+
+/* Highlights Container (Golden Ratio Grid) */
+.highlights-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for balance */
+    gap: 3vw 5vw; /* Balanced spacing */
+}
+
+/* Highlight Item Styling */
+.highlight-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden; /* Ensure no overflow during animation */
+}
+
+.highlight-item:hover {
+    transform: translateY(-8px) scale(1.02); /* Slight lift and scale */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-item h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    color: #2c2c2c;
+}
+
+.highlight-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+}
+
+/* Icon Circle - Enlarged Icons */
+.icon-circle {
+    width: 100px; /* Increased size */
+    height: 100px;
+    margin: 0 auto 1rem;
+    background-color: #f8f1e4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-circle img {
+    width: 70px; /* Larger icons */
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-circle:hover {
+    transform: scale(1.1); /* Smooth zoom effect */
+}
+
+.icon-circle img:hover {
+    transform: scale(1.2); /* Icon zoom */
+}

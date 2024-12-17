@@ -51,3 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuItems.forEach(item => observer.observe(item));
 });
+
+// Fade-in effect for Highlights Section
+document.addEventListener("DOMContentLoaded", () => {
+    const highlightsSection = document.getElementById("highlights");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                highlightsSection.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+
+    observer.observe(highlightsSection);
+});
