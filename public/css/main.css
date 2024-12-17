@@ -1,0 +1,69 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background-color: #f9f6f1; /* Light beige background */
+}
+
+/* Header */
+header {
+    background-color: #f8f1e4; /* Soft beige tone */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Follows Golden Ratio for spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%; /* Soft and rounded for "Caregiver" theme */
+    background: transparent;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Golden Ratio spacing */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #5a4d41; /* Soft brown */
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #b6825c; /* Warm brown for hover */
+}
+
+/* CTA Button */
+.cta .btn {
+    background-color: #b6825c; /* Warm, earthy tone */
+    color: #fff;
+    padding: 10px 20px; /* Golden Ratio padding */
+    border: none;
+    border-radius: 25px; /* Rounded for soft appeal */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #a06a4d; /* Slightly darker for interaction */
+}
