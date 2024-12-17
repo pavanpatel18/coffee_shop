@@ -1,18 +1,40 @@
 <header>
+    <!-- Navigation Bar -->
     <nav class="navbar">
+        <!-- Logo -->
         <div class="logo">
             <a href="/">
                 <img src="/images/logo.png" alt="The Coffee Shop Logo" />
             </a>
         </div>
+
+        <!-- Desktop Links -->
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#order" class="btn">Order Now</a></li>
         </ul>
-        <div class="cta">
-            <a href="#order" class="btn">Order Now</a>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul class="nav-links-mobile">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#order" class="btn">Order Now</a></li>
+        </ul>
+    </div>
 </header>
+<script src="/js/script.js"></script>

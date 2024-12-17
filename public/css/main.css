@@ -7,63 +7,167 @@
 }
 
 body {
-    background-color: #f9f6f1; /* Light beige background */
+    background-color: #f9f6f1; /* Soft beige background */
+    color: #5a4d41; /* Warm brown text */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Header */
+/* Header Section */
 header {
-    background-color: #f8f1e4; /* Soft beige tone */
+    background-color: #f8f1e4; /* Light beige header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px; /* Follows Golden Ratio for spacing */
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 15px 40px; /* Golden ratio spacing */
 }
 
-/* Logo */
 .logo img {
-    height: 50px;
+    height: 70px; /* Slightly larger for visibility */
     width: auto;
-    border-radius: 50%; /* Soft and rounded for "Caregiver" theme */
-    background: transparent;
+    border-radius: 50%;
 }
 
-/* Navigation Links */
+/* Desktop Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Golden Ratio spacing */
+    gap: 30px; /* Spacing between links */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #5a4d41; /* Soft brown */
+    color: #5a4d41;
     font-weight: 600;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #b6825c; /* Warm brown for hover */
+    color: #b6825c; /* Warm hover effect */
 }
 
-/* CTA Button */
-.cta .btn {
-    background-color: #b6825c; /* Warm, earthy tone */
-    color: #fff;
-    padding: 10px 20px; /* Golden Ratio padding */
-    border: none;
-    border-radius: 25px; /* Rounded for soft appeal */
-    font-weight: bold;
+.btn {
+    background-color: #b6825c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.cta .btn:hover {
-    background-color: #a06a4d; /* Slightly darker for interaction */
+.btn:hover {
+    background-color: #a06a4d;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #5a4d41;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    width: 100%; /* Full-screen coverage */
+    height: 100%;
+    background-color: #f8f1e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    gap: 30px; /* Vertical spacing */
+    transition: right 0.3s ease;
+    z-index: 9999; /* Ensure it appears above all content */
+}
+
+.mobile-menu.active {
+    right: 0; /* Slide into view */
+}
+
+/* Prevent scrolling when menu is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #5a4d41;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #b6825c;
+}
+
+/* Navigation Links in Mobile Menu */
+.mobile-menu .nav-links-mobile {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.mobile-menu .nav-links-mobile li {
+    margin: 10px 0;
+}
+
+.mobile-menu .nav-links-mobile a {
+    text-decoration: none;
+    color: #5a4d41;
+    font-weight: 600;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu .nav-links-mobile a:hover {
+    color: #b6825c;
+}
+
+.mobile-menu .btn {
+    background-color: #b6825c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.mobile-menu .btn:hover {
+    background-color: #a06a4d;
+}
+
+/* Show Hamburger Only on Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger */
+    }
+
+    .nav-links {
+        display: none; /* Hide desktop links */
+    }
 }
