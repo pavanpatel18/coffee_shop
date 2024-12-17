@@ -497,3 +497,89 @@ body.no-scroll {
 .icon-circle img:hover {
     transform: scale(1.2); /* Icon zoom */
 }
+
+/* Testimonials Section */
+#testimonials {
+    padding: 5vw 10vw; /* Golden Ratio Padding */
+    background-color: #fdf8f2; /* Soft, warm background */
+    text-align: center;
+}
+
+.testimonials-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.testimonials-header p {
+    font-size: 1.2rem;
+    color: #5a5a5a;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* Testimonials Grid */
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three evenly spaced columns */
+    gap: 3vw; /* Balanced spacing */
+}
+
+/* Testimonial Item */
+.testimonial-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Quote Styling */
+.testimonial-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #5a5a5a;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Customer Info */
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customer-info img {
+    width: 80px; /* Larger photo size */
+    height: 80px;
+    border-radius: 50%; /* Circular customer photos */
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+    border: 3px solid #f8f1e4; /* Soft border to match the theme */
+}
+
+.customer-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c2c2c;
+}
+
+/* Fade-in Animation */
+.testimonial-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.testimonial-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}

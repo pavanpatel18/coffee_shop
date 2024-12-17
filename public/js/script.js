@@ -66,3 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(highlightsSection);
 });
+
+// Scroll Animation for Testimonials
+document.addEventListener("DOMContentLoaded", () => {
+    const testimonials = document.querySelectorAll(".testimonial-item");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    testimonials.forEach(item => observer.observe(item));
+});
