@@ -261,3 +261,46 @@ body.no-scroll {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* About Section - Fix Alignment and Spacing */
+#about {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    text-align: center; /* Center-align text */
+    padding: 5vw 10vw; /* Balanced padding */
+    background-color: #fdf8f2; /* Light warm background */
+}
+
+.about-text {
+    max-width: 50%; /* Moderate width for text */
+    margin: 0 auto; /* Center horizontally */
+    color: #5a4d41; /* Warm brown text */
+}
+
+.about-text h2 {
+    font-size: 2.5rem; /* Balanced heading size */
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #2c2c2c; /* Neutral dark heading */
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5a5a5a; /* Subtle grey for text */
+    margin-bottom: 1.5rem;
+}
+
+/* Fade-in Animation */
+.about-text {
+    opacity: 0;
+    transform: translateY(30px); /* Start with a slight downward shift */
+    transition: all 1s ease-out; /* Smooth transition */
+}
+
+/* Add the 'active' class on scroll */
+.about-text.active {
+    opacity: 1;
+    transform: translateY(0); /* Reset position */
+}
