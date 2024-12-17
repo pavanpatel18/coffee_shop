@@ -171,3 +171,65 @@ body.no-scroll {
         display: none; /* Hide desktop links */
     }
 }
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw 10vw; /* Balanced padding using Golden Ratio */
+    background-color: #f9f5f0; /* Soft, warm neutral tone */
+}
+
+/* Hero Text Container (38.2% width) */
+#hero .hero-text {
+    flex: 1;
+    padding-right: 3vw; /* Space between text and image */
+    max-width: 38.2%; /* Golden Ratio alignment */
+}
+
+#hero .hero-text h1 {
+    font-size: 3rem; /* Large but calm header */
+    font-weight: 600;
+    color: #2c2c2c; /* Deep neutral tone for elegance */
+    line-height: 1.2; /* Clean spacing */
+    margin-bottom: 1rem;
+}
+
+#hero .hero-text p {
+    font-size: 1.2rem;
+    color: #5a5a5a; /* Warm grey for text */
+    margin-bottom: 1.5rem;
+    line-height: 1.5; /* Readable and soft */
+}
+
+#hero .hero-text a {
+    display: inline-block;
+    padding: 0.8rem 2rem; /* CTA button size */
+    background-color: #8a5c38; /* Warm coffee brown */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#hero .hero-text a:hover {
+    background-color: #6f482b; /* Darker brown on hover */
+}
+
+/* Hero Image Container (61.8% width) */
+#hero .hero-image {
+    flex: 1.618; /* Golden Ratio */
+    max-width: 61.8%; /* Image occupies more space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .hero-image img {
+    width: 100%; /* Responsive image */
+    border-radius: 12px; /* Soft, approachable edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft, subtle shadow */
+}
