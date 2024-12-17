@@ -81,3 +81,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     testimonials.forEach(item => observer.observe(item));
 });
+
+// Scroll Animation for Locations Section
+document.addEventListener("DOMContentLoaded", () => {
+    const locationItems = document.querySelectorAll(".location-item");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    locationItems.forEach(item => observer.observe(item));
+});
