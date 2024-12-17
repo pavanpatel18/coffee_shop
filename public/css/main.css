@@ -233,3 +233,31 @@ body.no-scroll {
     border-radius: 12px; /* Soft, approachable edges */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft, subtle shadow */
 }
+
+/* Hero Section: Image Parallax Effect */
+#hero .hero-image img {
+    transition: transform 0.3s ease-out;
+}
+#hero:hover .hero-image img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Fade-in Animation for Hero Text */
+.hero-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Hover Scaling Effect */
+.hero-text a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
