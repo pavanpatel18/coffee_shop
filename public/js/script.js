@@ -36,3 +36,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(aboutText);
 });
+
+// Fade-in Animation for Featured Section
+document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.3 }); // Trigger when 30% of item is visible
+
+    menuItems.forEach(item => observer.observe(item));
+});

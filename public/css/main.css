@@ -304,3 +304,100 @@ body.no-scroll {
     opacity: 1;
     transform: translateY(0); /* Reset position */
 }
+/* Featured Menu Section */
+#featured-menu {
+    padding: 5vw 10vw; /* Balanced Golden Ratio padding */
+    background-color: #f8f1e4; /* Warm, inviting background */
+    text-align: center;
+    color: #5a4d41;
+}
+
+.menu-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c2c2c;
+}
+
+.menu-header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+}
+
+/* Menu Items Grid */
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw; /* Spacing between items */
+}
+
+.menu-item {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Active Class to Trigger Animation */
+.menu-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    height: 180px; /* Fixed height for consistency */
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.menu-item:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin-bottom: 1rem;
+}
+
+/* CTA Button */
+.menu-cta {
+    margin-top: 2rem;
+}
+
+.menu-cta .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #8a5c38; /* Warm coffee brown */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-cta .btn:hover {
+    background-color: #6f482b; /* Darker shade on hover */
+}
